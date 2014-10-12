@@ -1,0 +1,22 @@
+{
+	"name": "ShareSquare",
+	"description": "Platform to Share your stuff with others",
+	"version": "0.0.1",
+	"author": "Karthik",
+	"main":"server.js",
+	"dependencies": {
+	  	"express" : ">=4.9.7", 			
+      	"ejs" : "~1.0.0",
+		"mongoose" : "~3.8.1",
+		"passport-google-oauth" : "~0.1.5",
+		"passport-facebook" : "~1.0.2",
+		"passport-twitter" : "~1.0.2",
+		"passport" : "~0.1.17",     
+		"connect-flash" : "~0.1.1", 	
+		"bcrypt-nodejs" : "latest",
+		"cookie-parser": "~1.0.0",
+	      "body-parser": "~1.0.0",
+	      "express-session": "~1.0.0",
+		"morgan": "~1.0.0"
+	}
+}
