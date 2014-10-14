@@ -8,11 +8,11 @@ module.exports = function(app, passport) {
 	});
 
 	// PROFILE SECTION =========================
-	app.get('/profile', isLoggedIn, function(req, res) {
-		res.render('profile.ejs', {
+	/*app.get('/profile', isLoggedIn, function(req, res) {
+		res.render('partials/profile.html', {
 			user : req.user
 		});
-	});
+	});*/
 	
 	app.get('/dashboard', isLoggedIn, function(req, res) {
 		res.render('dashboard.ejs', {
