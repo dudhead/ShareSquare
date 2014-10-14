@@ -4,12 +4,18 @@ module.exports = function(app, passport) {
 
 	// show the home page (will also have our login links)
 	app.get('/', function(req, res) {
-		res.render('index.ejs');
+			res.render('index.ejs');
 	});
 
 	// PROFILE SECTION =========================
 	app.get('/profile', isLoggedIn, function(req, res) {
 		res.render('profile.ejs', {
+			user : req.user
+		});
+	});
+	
+	app.get('/dashboard', isLoggedIn, function(req, res) {
+		res.render('dashboard.ejs', {
 			user : req.user
 		});
 	});
@@ -31,7 +37,7 @@ module.exports = function(app, passport) {
 		// handle the callback after facebook has authenticated the user
 		app.get('/facebookcallback',
 			passport.authenticate('facebook', {
-				successRedirect : '/profile',
+				successRedirect : '/dashboard',
 				failureRedirect : '/'
 			}));
 
